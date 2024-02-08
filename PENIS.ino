@@ -1,5 +1,9 @@
 //shared with Mr Hansen successfully - also added the .ino to your filename so it runs ok
 //Jayden Kayes super cool hardcore code
+#include <Servo.h>
+
+Servo leftEar;
+Servo rightEar;
 
 byte LEDPIN = 13;
 
@@ -7,6 +11,8 @@ const byte PAW1 = 1;
 const byte PAW2 = 2;
 const byte PAW3 = 3;
 const byte PAW4 = 4;
+const byte LEFTEARPIN = 9;
+const byte RIGHTEARPIN = 10;
 // this code above this is setting the pins
 void setup() {
   pinMode(LEDPIN, OUTPUT);
@@ -14,7 +20,8 @@ void setup() {
   pinMode(PAW2, INPUT);
   pinMode(PAW3, INPUT);
   pinMode(PAW4, INPUT);
-
+  leftEar.attach(LEFTEARPIN);
+  rightEar.attach(RIGHTEARPIN);
   //this code is setting the variables as inputs and outputs
 }
 
@@ -36,6 +43,4 @@ void loop() {
   if (digitalRead(PAW4) == HIGH) {
     digitalWrite(LEDPIN, LOW);
   }
-
 }
-
