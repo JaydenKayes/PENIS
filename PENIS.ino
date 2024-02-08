@@ -1,3 +1,4 @@
+//shared with Mr Hansen successfully - also added the .ino to your filename so it runs ok
 //Jayden Kayes super cool hardcore code
 
 byte LEDPIN = 13;
